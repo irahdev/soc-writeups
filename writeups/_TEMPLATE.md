@@ -31,3 +31,14 @@ DeviceProcessEvents
 | where FileName =~ "powershell.exe"
 | where ProcessCommandLine has_any ("-enc", "-EncodedCommand")
 | where InitiatingProcessFileName in~ ("winword.exe","excel.exe","outlook.exe")
+
+
+
+Header	Date | Analyst | Severity | Verdict (True Positive / False Positive)
+1. Alert	What rule fired, when, on which host, which user, what triggered it.
+2. Initial triage	First observations. What made this worth investigating — or not.
+3. Investigation steps	Every query you ran and every log you checked. Bullet list.
+4. Findings	What happened. Scope: how many hosts, what was accessed, what failed.
+5. Actions taken	Containment, blocking, escalation. Who you handed it to.
+6. Recommendation	What detection or control would have caught this earlier.
+7. Detection logic	The KQL or Sigma rule, in a code block.
